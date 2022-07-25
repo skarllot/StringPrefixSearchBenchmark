@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using BenchmarkDotNet.Configs;
-using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Running;
 
 namespace BenchmarkTests
@@ -9,8 +8,7 @@ namespace BenchmarkTests
     {
         public static void Main(string[] args)
         {
-            var config = DefaultConfig.Instance
-                .AddExporter(AsciiDocExporter.Default)
+            var config = new CustomConfig()
                 .WithOption(ConfigOptions.DisableLogFile, true)
                 .WithArtifactsPath(GetArtifactsPath());
 

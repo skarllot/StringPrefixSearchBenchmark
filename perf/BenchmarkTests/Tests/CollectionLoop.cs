@@ -1,16 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
 
 namespace BenchmarkTests.Tests
 {
-    [AsciiDocExporter]
     [MemoryDiagnoser]
+    [DisassemblyDiagnoser]
     [ShortRunJob]
     public class CollectionLoop
     {
-        private int[] ArrayRef;
-        private List<int> ListRef;
+        private string[] _arrayRef = Array.Empty<string>();
+        private List<string> _listRef = new();
 
         [Params(100, 1_000, 10_000)]
         public int Length { get; set; } = 0;
@@ -18,17 +19,21 @@ namespace BenchmarkTests.Tests
         [GlobalSetup]
         public void Setup()
         {
-            ArrayRef = Enumerable.Range(1, Length).ToArray();
-            ListRef = Enumerable.Range(1, Length).ToList();
+            _arrayRef = string.Concat(Strings.LoremIpsum100Lines, " ", Strings.LoremIpsum100Lines)
+                .Split(new[] { '\r', '\r', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Take(Length)
+                .ToArray();
+
+            _listRef = _arrayRef.ToList();
         }
 
         [Benchmark(Baseline = true)]
         public int ForArray()
         {
             int sum = 0;
-            for (var i = 0; i < ArrayRef.Length; i++)
+            for (var i = 0; i < _arrayRef.Length; i++)
             {
-                sum += ArrayRef[i];
+                sum += _arrayRef[i].Length;
             }
 
             return sum;
@@ -38,9 +43,9 @@ namespace BenchmarkTests.Tests
         public int ForList()
         {
             int sum = 0;
-            for (var i = 0; i < ListRef.Count; i++)
+            for (var i = 0; i < _listRef.Count; i++)
             {
-                sum += ListRef[i];
+                sum += _listRef[i].Length;
             }
 
             return sum;
@@ -50,9 +55,9 @@ namespace BenchmarkTests.Tests
         public int ForEachArray()
         {
             int sum = 0;
-            foreach (var element in ArrayRef)
+            foreach (var element in _arrayRef)
             {
-                sum += element;
+                sum += element.Length;
             }
 
             return sum;
@@ -62,9 +67,9 @@ namespace BenchmarkTests.Tests
         public int ForEachList()
         {
             int sum = 0;
-            foreach (var element in ListRef)
+            foreach (var element in _listRef)
             {
-                sum += element;
+                sum += element.Length;
             }
 
             return sum;
@@ -73,13 +78,13 @@ namespace BenchmarkTests.Tests
         [Benchmark]
         public int LinqSumArray()
         {
-            return ArrayRef.Sum();
+            return _arrayRef.Sum(s => s.Length);
         }
 
         [Benchmark]
         public int LinqSumList()
         {
-            return ListRef.Sum();
+            return _listRef.Sum(s => s.Length);
         }
     }
 }

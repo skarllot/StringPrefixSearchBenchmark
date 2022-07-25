@@ -4,7 +4,6 @@ using BenchmarkDotNet.Attributes;
 
 namespace BenchmarkTests.Tests
 {
-    [AsciiDocExporter]
     [MemoryDiagnoser]
     [ShortRunJob]
     public class StringPrefixSearch
