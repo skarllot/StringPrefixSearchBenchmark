@@ -1,14 +1,16 @@
 ﻿using System.IO;
 using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Running;
 
-namespace StringPrefixSearchBenchmark
+namespace BenchmarkTests
 {
     public static class Program
     {
         public static void Main(string[] args)
         {
-            var config = new BenchmarkConfig()
+            var config = DefaultConfig.Instance
+                .AddExporter(AsciiDocExporter.Default)
                 .WithOption(ConfigOptions.DisableLogFile, true)
                 .WithArtifactsPath(GetArtifactsPath());
 

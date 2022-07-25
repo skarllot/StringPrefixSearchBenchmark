@@ -1,14 +1,12 @@
 using System;
 using System.Collections.Generic;
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Jobs;
 
-namespace StringPrefixSearchBenchmark
+namespace BenchmarkTests.Tests
 {
     [AsciiDocExporter]
-    [SimpleJob(RuntimeMoniker.Net50)]
-    [SimpleJob(RuntimeMoniker.NetCoreApp31)]
     [MemoryDiagnoser]
+    [ShortRunJob]
     public class StringPrefixSearch
     {
         private const string StringRef =

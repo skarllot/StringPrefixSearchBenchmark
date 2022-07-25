@@ -5,8 +5,7 @@
         <Nullable>enable</Nullable>
         <Configurations>Release</Configurations>
         <Platforms>AnyCPU</Platforms>
-        <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
-        <LangVersion>9</LangVersion>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>

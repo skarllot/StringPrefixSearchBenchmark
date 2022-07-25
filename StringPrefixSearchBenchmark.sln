@@ -11,7 +11,7 @@ EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "perf", "perf", "{81151F5F-F053-4297-B22D-940DCD5AE404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringPrefixSearchBenchmark", "perf\StringPrefixSearchBenchmark\StringPrefixSearchBenchmark.csproj", "{CC062832-7563-4590-A5D4-044FE7553562}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkTests", "perf\BenchmarkTests\BenchmarkTests.csproj", "{CC062832-7563-4590-A5D4-044FE7553562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
