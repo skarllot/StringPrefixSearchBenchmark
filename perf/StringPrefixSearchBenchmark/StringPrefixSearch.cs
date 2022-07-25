@@ -54,13 +54,13 @@ namespace StringPrefixSearchBenchmark
         [Benchmark]
         public int StringSpanIndex()
         {
-            return Input.AsSpan(0, 2).IndexOf(StringRef, StringComparison.Ordinal);
+            return StringRef.AsSpan().IndexOf(Input.AsSpan(0, 2), StringComparison.Ordinal);
         }
 
         [Benchmark]
         public int StringSubstringIndex()
         {
-            return Input.Substring(0, 2).IndexOf(StringRef, StringComparison.Ordinal);
+            return StringRef.IndexOf(Input.Substring(0, 2), StringComparison.Ordinal);
         }
 
         [Benchmark]
