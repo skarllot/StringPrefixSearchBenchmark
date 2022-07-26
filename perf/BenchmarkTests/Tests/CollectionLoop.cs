@@ -7,7 +7,6 @@ namespace BenchmarkTests.Tests
 {
     [MemoryDiagnoser]
     [DisassemblyDiagnoser]
-    [ShortRunJob]
     public class CollectionLoop
     {
         private string[] _arrayRef = Array.Empty<string>();

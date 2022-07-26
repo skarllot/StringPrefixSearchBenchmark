@@ -5,7 +5,6 @@ using BenchmarkDotNet.Attributes;
 namespace BenchmarkTests.Tests
 {
     [MemoryDiagnoser]
-    [ShortRunJob]
     public class StringPrefixSearch
     {
         private const string StringRef =

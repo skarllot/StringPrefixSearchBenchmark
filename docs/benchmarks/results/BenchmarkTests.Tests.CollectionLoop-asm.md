@@ -142,20 +142,20 @@ System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVer
        push      rsi
        sub       rsp,28
        mov       rsi,[rcx+8]
-       mov       rcx,165D63C75C8
+       mov       rcx,259180075C8
        mov       r8,[rcx]
        test      r8,r8
        jne       short M00_L00
        mov       rcx,offset MT_System.Func`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]
        call      CORINFO_HELP_NEWSFAST
        mov       rdi,rax
-       mov       rdx,165D63C75C0
+       mov       rdx,259180075C0
        mov       rdx,[rdx]
        lea       rcx,[rdi+8]
        call      CORINFO_HELP_ASSIGN_REF
        mov       rdx,offset BenchmarkTests.Tests.CollectionLoop+<>c.<LinqSumArray>b__11_0(System.String)
        mov       [rdi+18],rdx
-       mov       rcx,165D63C75C8
+       mov       rcx,259180075C8
        mov       rdx,rdi
        call      CORINFO_HELP_CHECKED_ASSIGN_REF
        mov       r8,rdi
@@ -201,7 +201,7 @@ M00_L00:
        jmp       short M02_L01
 M02_L00:
        mov       rcx,rsi
-       mov       rdx,7FF8B2068D30
+       mov       rdx,7FF8ACB37CA0
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L01:
@@ -210,8 +210,8 @@ M02_L01:
        mov       rcx,rax
        mov       [rbp+0FFC8],rcx
 M02_L02:
-       mov       r11,7FF8B1C503C8
-       call      qword ptr [7FF8B1FA03C8]
+       mov       r11,7FF8AC7203C0
+       call      qword ptr [7FF8ACA803C0]
        test      eax,eax
        je        short M02_L06
        mov       r11,[r15+28]
@@ -220,7 +220,7 @@ M02_L02:
        jmp       short M02_L04
 M02_L03:
        mov       rcx,rsi
-       mov       rdx,7FF8B2068E08
+       mov       rdx,7FF8ACB37D78
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L04:
@@ -239,8 +239,8 @@ M02_L05:
        int       3
 M02_L06:
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C503D0
-       call      qword ptr [7FF8B1FA03D0]
+       mov       r11,7FF8AC7203C8
+       call      qword ptr [7FF8ACA803C8]
        mov       eax,r14d
        add       rsp,38
        pop       rbx
@@ -271,8 +271,8 @@ M02_L08:
        cmp       qword ptr [rbp+0FFC8],0
        je        short M02_L09
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C503D0
-       call      qword ptr [7FF8B1FA03D0]
+       mov       r11,7FF8AC7203C8
+       call      qword ptr [7FF8ACA803C8]
 M02_L09:
        nop
        add       rsp,28
@@ -293,20 +293,20 @@ M02_L09:
        push      rsi
        sub       rsp,28
        mov       rsi,[rcx+10]
-       mov       rcx,130C38875D0
+       mov       rcx,1ED4DB075D0
        mov       r8,[rcx]
        test      r8,r8
        jne       short M00_L00
        mov       rcx,offset MT_System.Func`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]
        call      CORINFO_HELP_NEWSFAST
        mov       rdi,rax
-       mov       rdx,130C38875C0
+       mov       rdx,1ED4DB075C0
        mov       rdx,[rdx]
        lea       rcx,[rdi+8]
        call      CORINFO_HELP_ASSIGN_REF
        mov       rdx,offset BenchmarkTests.Tests.CollectionLoop+<>c.<LinqSumList>b__12_0(System.String)
        mov       [rdi+18],rdx
-       mov       rcx,130C38875D0
+       mov       rcx,1ED4DB075D0
        mov       rdx,rdi
        call      CORINFO_HELP_CHECKED_ASSIGN_REF
        mov       r8,rdi
@@ -352,7 +352,7 @@ M00_L00:
        jmp       short M02_L01
 M02_L00:
        mov       rcx,rsi
-       mov       rdx,7FF8B20790C8
+       mov       rdx,7FF8ACB48038
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L01:
@@ -361,8 +361,8 @@ M02_L01:
        mov       rcx,rax
        mov       [rbp+0FFC8],rcx
 M02_L02:
-       mov       r11,7FF8B1C603C8
-       call      qword ptr [7FF8B1FB03C8]
+       mov       r11,7FF8AC7303C0
+       call      qword ptr [7FF8ACA903C0]
        test      eax,eax
        je        short M02_L06
        mov       r11,[r15+28]
@@ -371,7 +371,7 @@ M02_L02:
        jmp       short M02_L04
 M02_L03:
        mov       rcx,rsi
-       mov       rdx,7FF8B20791A0
+       mov       rdx,7FF8ACB48110
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L04:
@@ -390,8 +390,8 @@ M02_L05:
        int       3
 M02_L06:
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C603D0
-       call      qword ptr [7FF8B1FB03D0]
+       mov       r11,7FF8AC7303C8
+       call      qword ptr [7FF8ACA903C8]
        mov       eax,r14d
        add       rsp,38
        pop       rbx
@@ -422,8 +422,8 @@ M02_L08:
        cmp       qword ptr [rbp+0FFC8],0
        je        short M02_L09
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C603D0
-       call      qword ptr [7FF8B1FB03D0]
+       mov       r11,7FF8AC7303C8
+       call      qword ptr [7FF8ACA903C8]
 M02_L09:
        nop
        add       rsp,28
@@ -581,20 +581,20 @@ System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVer
        push      rsi
        sub       rsp,28
        mov       rsi,[rcx+8]
-       mov       rcx,1FEC03E75C8
+       mov       rcx,2BBC39775C8
        mov       r8,[rcx]
        test      r8,r8
        jne       short M00_L00
        mov       rcx,offset MT_System.Func`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]
        call      CORINFO_HELP_NEWSFAST
        mov       rdi,rax
-       mov       rdx,1FEC03E75C0
+       mov       rdx,2BBC39775C0
        mov       rdx,[rdx]
        lea       rcx,[rdi+8]
        call      CORINFO_HELP_ASSIGN_REF
        mov       rdx,offset BenchmarkTests.Tests.CollectionLoop+<>c.<LinqSumArray>b__11_0(System.String)
        mov       [rdi+18],rdx
-       mov       rcx,1FEC03E75C8
+       mov       rcx,2BBC39775C8
        mov       rdx,rdi
        call      CORINFO_HELP_CHECKED_ASSIGN_REF
        mov       r8,rdi
@@ -640,7 +640,7 @@ M00_L00:
        jmp       short M02_L01
 M02_L00:
        mov       rcx,rsi
-       mov       rdx,7FF8B2068C78
+       mov       rdx,7FF8ACB57BE8
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L01:
@@ -649,8 +649,8 @@ M02_L01:
        mov       rcx,rax
        mov       [rbp+0FFC8],rcx
 M02_L02:
-       mov       r11,7FF8B1C503C8
-       call      qword ptr [7FF8B1FA03C8]
+       mov       r11,7FF8AC7403C0
+       call      qword ptr [7FF8ACAA03C0]
        test      eax,eax
        je        short M02_L06
        mov       r11,[r15+28]
@@ -659,7 +659,7 @@ M02_L02:
        jmp       short M02_L04
 M02_L03:
        mov       rcx,rsi
-       mov       rdx,7FF8B2068D50
+       mov       rdx,7FF8ACB57CC0
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L04:
@@ -678,8 +678,8 @@ M02_L05:
        int       3
 M02_L06:
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C503D0
-       call      qword ptr [7FF8B1FA03D0]
+       mov       r11,7FF8AC7403C8
+       call      qword ptr [7FF8ACAA03C8]
        mov       eax,r14d
        add       rsp,38
        pop       rbx
@@ -710,8 +710,8 @@ M02_L08:
        cmp       qword ptr [rbp+0FFC8],0
        je        short M02_L09
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C503D0
-       call      qword ptr [7FF8B1FA03D0]
+       mov       r11,7FF8AC7403C8
+       call      qword ptr [7FF8ACAA03C8]
 M02_L09:
        nop
        add       rsp,28
@@ -732,20 +732,20 @@ M02_L09:
        push      rsi
        sub       rsp,28
        mov       rsi,[rcx+10]
-       mov       rcx,1E2F03E75D0
+       mov       rcx,27EC22E75D0
        mov       r8,[rcx]
        test      r8,r8
        jne       short M00_L00
        mov       rcx,offset MT_System.Func`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]
        call      CORINFO_HELP_NEWSFAST
        mov       rdi,rax
-       mov       rdx,1E2F03E75C0
+       mov       rdx,27EC22E75C0
        mov       rdx,[rdx]
        lea       rcx,[rdi+8]
        call      CORINFO_HELP_ASSIGN_REF
        mov       rdx,offset BenchmarkTests.Tests.CollectionLoop+<>c.<LinqSumList>b__12_0(System.String)
        mov       [rdi+18],rdx
-       mov       rcx,1E2F03E75D0
+       mov       rcx,27EC22E75D0
        mov       rdx,rdi
        call      CORINFO_HELP_CHECKED_ASSIGN_REF
        mov       r8,rdi
@@ -791,7 +791,7 @@ M00_L00:
        jmp       short M02_L01
 M02_L00:
        mov       rcx,rsi
-       mov       rdx,7FF8B20690C8
+       mov       rdx,7FF8ACB48038
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L01:
@@ -800,8 +800,8 @@ M02_L01:
        mov       rcx,rax
        mov       [rbp+0FFC8],rcx
 M02_L02:
-       mov       r11,7FF8B1C503C8
-       call      qword ptr [7FF8B1FA03C8]
+       mov       r11,7FF8AC7303C0
+       call      qword ptr [7FF8ACA903C0]
        test      eax,eax
        je        short M02_L06
        mov       r11,[r15+28]
@@ -810,7 +810,7 @@ M02_L02:
        jmp       short M02_L04
 M02_L03:
        mov       rcx,rsi
-       mov       rdx,7FF8B20691A0
+       mov       rdx,7FF8ACB48110
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L04:
@@ -829,8 +829,8 @@ M02_L05:
        int       3
 M02_L06:
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C503D0
-       call      qword ptr [7FF8B1FA03D0]
+       mov       r11,7FF8AC7303C8
+       call      qword ptr [7FF8ACA903C8]
        mov       eax,r14d
        add       rsp,38
        pop       rbx
@@ -861,8 +861,8 @@ M02_L08:
        cmp       qword ptr [rbp+0FFC8],0
        je        short M02_L09
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C503D0
-       call      qword ptr [7FF8B1FA03D0]
+       mov       r11,7FF8AC7303C8
+       call      qword ptr [7FF8ACA903C8]
 M02_L09:
        nop
        add       rsp,28
@@ -1020,20 +1020,20 @@ System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVer
        push      rsi
        sub       rsp,28
        mov       rsi,[rcx+8]
-       mov       rcx,1C9980075C8
+       mov       rcx,20FC1EB75C8
        mov       r8,[rcx]
        test      r8,r8
        jne       short M00_L00
        mov       rcx,offset MT_System.Func`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]
        call      CORINFO_HELP_NEWSFAST
        mov       rdi,rax
-       mov       rdx,1C9980075C0
+       mov       rdx,20FC1EB75C0
        mov       rdx,[rdx]
        lea       rcx,[rdi+8]
        call      CORINFO_HELP_ASSIGN_REF
        mov       rdx,offset BenchmarkTests.Tests.CollectionLoop+<>c.<LinqSumArray>b__11_0(System.String)
        mov       [rdi+18],rdx
-       mov       rcx,1C9980075C8
+       mov       rcx,20FC1EB75C8
        mov       rdx,rdi
        call      CORINFO_HELP_CHECKED_ASSIGN_REF
        mov       r8,rdi
@@ -1079,7 +1079,7 @@ M00_L00:
        jmp       short M02_L01
 M02_L00:
        mov       rcx,rsi
-       mov       rdx,7FF8B2038C78
+       mov       rdx,7FF8ACB67BE8
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L01:
@@ -1088,8 +1088,8 @@ M02_L01:
        mov       rcx,rax
        mov       [rbp+0FFC8],rcx
 M02_L02:
-       mov       r11,7FF8B1C203C8
-       call      qword ptr [7FF8B1F703C8]
+       mov       r11,7FF8AC7503C0
+       call      qword ptr [7FF8ACAB03C0]
        test      eax,eax
        je        short M02_L06
        mov       r11,[r15+28]
@@ -1098,7 +1098,7 @@ M02_L02:
        jmp       short M02_L04
 M02_L03:
        mov       rcx,rsi
-       mov       rdx,7FF8B2038D50
+       mov       rdx,7FF8ACB67CC0
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L04:
@@ -1117,8 +1117,8 @@ M02_L05:
        int       3
 M02_L06:
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C203D0
-       call      qword ptr [7FF8B1F703D0]
+       mov       r11,7FF8AC7503C8
+       call      qword ptr [7FF8ACAB03C8]
        mov       eax,r14d
        add       rsp,38
        pop       rbx
@@ -1149,8 +1149,8 @@ M02_L08:
        cmp       qword ptr [rbp+0FFC8],0
        je        short M02_L09
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C203D0
-       call      qword ptr [7FF8B1F703D0]
+       mov       r11,7FF8AC7503C8
+       call      qword ptr [7FF8ACAB03C8]
 M02_L09:
        nop
        add       rsp,28
@@ -1171,20 +1171,20 @@ M02_L09:
        push      rsi
        sub       rsp,28
        mov       rsi,[rcx+10]
-       mov       rcx,1DE255975D0
+       mov       rcx,26B64A475D0
        mov       r8,[rcx]
        test      r8,r8
        jne       short M00_L00
        mov       rcx,offset MT_System.Func`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]
        call      CORINFO_HELP_NEWSFAST
        mov       rdi,rax
-       mov       rdx,1DE255975C0
+       mov       rdx,26B64A475C0
        mov       rdx,[rdx]
        lea       rcx,[rdi+8]
        call      CORINFO_HELP_ASSIGN_REF
        mov       rdx,offset BenchmarkTests.Tests.CollectionLoop+<>c.<LinqSumList>b__12_0(System.String)
        mov       [rdi+18],rdx
-       mov       rcx,1DE255975D0
+       mov       rcx,26B64A475D0
        mov       rdx,rdi
        call      CORINFO_HELP_CHECKED_ASSIGN_REF
        mov       r8,rdi
@@ -1230,7 +1230,7 @@ M00_L00:
        jmp       short M02_L01
 M02_L00:
        mov       rcx,rsi
-       mov       rdx,7FF8B20490C8
+       mov       rdx,7FF8ACB48038
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L01:
@@ -1239,8 +1239,8 @@ M02_L01:
        mov       rcx,rax
        mov       [rbp+0FFC8],rcx
 M02_L02:
-       mov       r11,7FF8B1C303C8
-       call      qword ptr [7FF8B1F803C8]
+       mov       r11,7FF8AC7303C0
+       call      qword ptr [7FF8ACA903C0]
        test      eax,eax
        je        short M02_L06
        mov       r11,[r15+28]
@@ -1249,7 +1249,7 @@ M02_L02:
        jmp       short M02_L04
 M02_L03:
        mov       rcx,rsi
-       mov       rdx,7FF8B20491A0
+       mov       rdx,7FF8ACB48110
        call      CORINFO_HELP_RUNTIMEHANDLE_METHOD
        mov       r11,rax
 M02_L04:
@@ -1268,8 +1268,8 @@ M02_L05:
        int       3
 M02_L06:
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C303D0
-       call      qword ptr [7FF8B1F803D0]
+       mov       r11,7FF8AC7303C8
+       call      qword ptr [7FF8ACA903C8]
        mov       eax,r14d
        add       rsp,38
        pop       rbx
@@ -1300,8 +1300,8 @@ M02_L08:
        cmp       qword ptr [rbp+0FFC8],0
        je        short M02_L09
        mov       rcx,[rbp+0FFC8]
-       mov       r11,7FF8B1C303D0
-       call      qword ptr [7FF8B1F803D0]
+       mov       r11,7FF8AC7303C8
+       call      qword ptr [7FF8ACA903C8]
 M02_L09:
        nop
        add       rsp,28

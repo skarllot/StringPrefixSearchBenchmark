@@ -26,7 +26,7 @@ public class CustomConfig
 
     public IEnumerable<IExporter> GetExporters()
     {
-        yield return MarkdownExporter.GitHub;
+        yield return AsciiDocExporter.Default;
     }
 
     public IEnumerable<ILogger> GetLoggers()
