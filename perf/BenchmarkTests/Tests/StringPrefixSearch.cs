@@ -48,15 +48,15 @@ namespace BenchmarkTests.Tests
         public string Input { get; set; } = string.Empty;
 
         [Benchmark]
-        public int StringSpanIndex()
+        public bool StringSpanIndex()
         {
-            return StringRef.AsSpan().IndexOf(Input.AsSpan(0, 2), StringComparison.Ordinal);
+            return StringRef.AsSpan().IndexOf(Input.AsSpan(0, 2), StringComparison.Ordinal) != -1;
         }
 
         [Benchmark]
-        public int StringSubstringIndex()
+        public bool StringSubstringIndex()
         {
-            return StringRef.IndexOf(Input.Substring(0, 2), StringComparison.Ordinal);
+            return StringRef.IndexOf(Input.Substring(0, 2), StringComparison.Ordinal) != -1;
         }
 
         [Benchmark]
@@ -66,15 +66,15 @@ namespace BenchmarkTests.Tests
         }
 
         [Benchmark]
-        public int StringArrayIndex()
+        public bool StringArrayIndex()
         {
-            return Array.IndexOf(ArrayRef, Input.Substring(0, 2), 0);
+            return Array.IndexOf(ArrayRef, Input.Substring(0, 2), 0) != -1;
         }
 
         [Benchmark]
-        public int StringArrayBinarySearch()
+        public bool StringArrayBinarySearch()
         {
-            return Array.BinarySearch(ArrayRef, Input.Substring(0, 2));
+            return Array.BinarySearch(ArrayRef, Input.Substring(0, 2)) != -1;
         }
     }
 }

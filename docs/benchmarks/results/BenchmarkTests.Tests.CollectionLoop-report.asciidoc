@@ -1,30 +1,30 @@
 ....
-BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22000
-11th Gen Intel Core i5-1145G7 2.60GHz, 1 CPU, 8 logical and 4 physical cores
-.NET SDK=6.0.201
-  [Host]     : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
-  DefaultJob : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
+BenchmarkDotNet=v0.13.1, OS=fedora 35
+AMD Ryzen 5 1600, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.105
+  [Host]     : .NET 6.0.5 (6.0.522.26101), X64 RyuJIT
+  DefaultJob : .NET 6.0.5 (6.0.522.26101), X64 RyuJIT
 
 ....
 [options="header"]
 |===
-|        Method|  Length|          Mean|         Error|        StdDev|        Median|  Ratio|  RatioSD|  Code Size|   Gen 0|  Allocated
-|      ForArray|     100|      60.04 ns|      1.742 ns|      4.828 ns|      57.58 ns|   1.00|     0.00|       71 B|       -|          -
-|       ForList|     100|      59.38 ns|      1.029 ns|      0.962 ns|      59.18 ns|   0.89|     0.06|       78 B|       -|          -
-|  ForEachArray|     100|      46.34 ns|      0.427 ns|      0.357 ns|      46.30 ns|   0.69|     0.05|       52 B|       -|          -
-|   ForEachList|     100|      77.59 ns|      0.544 ns|      0.509 ns|      77.60 ns|   1.16|     0.08|      100 B|       -|          -
-|  LinqSumArray|     100|     435.85 ns|      8.511 ns|     21.508 ns|     427.92 ns|   7.24|     0.62|      448 B|  0.0076|       32 B
-|   LinqSumList|     100|     905.17 ns|     47.780 ns|    140.880 ns|     823.80 ns|  15.23|     2.56|      448 B|  0.0095|       40 B
-|      ForArray|    1000|     500.68 ns|      8.619 ns|      7.641 ns|     498.99 ns|   1.00|     0.00|       71 B|       -|          -
-|       ForList|    1000|     530.21 ns|      6.694 ns|      5.590 ns|     529.15 ns|   1.06|     0.02|       78 B|       -|          -
-|  ForEachArray|    1000|     405.18 ns|      1.007 ns|      0.841 ns|     405.14 ns|   0.81|     0.01|       52 B|       -|          -
-|   ForEachList|    1000|     710.11 ns|      6.860 ns|      6.081 ns|     710.72 ns|   1.42|     0.02|      100 B|       -|          -
-|  LinqSumArray|    1000|   4,118.06 ns|     81.241 ns|    133.481 ns|   4,107.86 ns|   8.08|     0.25|      448 B|  0.0076|       32 B
-|   LinqSumList|    1000|   7,792.17 ns|    152.505 ns|    237.432 ns|   7,731.72 ns|  15.80|     0.48|      448 B|       -|       40 B
-|      ForArray|   10000|   7,526.02 ns|     52.041 ns|     48.679 ns|   7,521.04 ns|   1.00|     0.00|       71 B|       -|          -
-|       ForList|   10000|   7,521.25 ns|     57.262 ns|     53.563 ns|   7,495.67 ns|   1.00|     0.01|       78 B|       -|          -
-|  ForEachArray|   10000|   5,001.68 ns|     42.491 ns|     39.746 ns|   5,007.94 ns|   0.66|     0.01|       52 B|       -|          -
-|   ForEachList|   10000|   7,499.09 ns|    145.951 ns|    162.224 ns|   7,463.84 ns|   1.00|     0.02|      100 B|       -|          -
-|  LinqSumArray|   10000|  52,275.33 ns|  1,003.670 ns|  1,305.055 ns|  52,383.61 ns|   6.92|     0.21|      448 B|       -|       32 B
-|   LinqSumList|   10000|  97,903.31 ns|  1,925.053 ns|  2,434.575 ns|  97,602.23 ns|  13.01|     0.39|      448 B|       -|       40 B
+|        Method|  Length|           Mean|         Error|        StdDev|  Ratio|  RatioSD|  Code Size|  Allocated
+|      ForArray|     100|       63.69 ns|      0.349 ns|      0.327 ns|   1.00|     0.00|       66 B|          -
+|       ForList|     100|       86.69 ns|      0.150 ns|      0.117 ns|   1.36|     0.01|       69 B|          -
+|  ForEachArray|     100|       47.91 ns|      0.201 ns|      0.179 ns|   0.75|     0.00|       51 B|          -
+|   ForEachList|     100|      115.44 ns|      0.340 ns|      0.318 ns|   1.81|     0.01|       90 B|          -
+|  LinqSumArray|     100|      660.85 ns|     13.223 ns|     19.382 ns|  10.30|     0.30|      469 B|       32 B
+|   LinqSumList|     100|    1,286.19 ns|     24.294 ns|     22.725 ns|  20.20|     0.41|      469 B|       40 B
+|      ForArray|    1000|      678.08 ns|      2.154 ns|      1.682 ns|   1.00|     0.00|       66 B|          -
+|       ForList|    1000|      827.19 ns|      5.707 ns|      5.059 ns|   1.22|     0.01|       69 B|          -
+|  ForEachArray|    1000|      433.00 ns|      0.811 ns|      0.719 ns|   0.64|     0.00|       51 B|          -
+|   ForEachList|    1000|    1,098.34 ns|      2.183 ns|      2.042 ns|   1.62|     0.01|       90 B|          -
+|  LinqSumArray|    1000|    6,152.49 ns|    116.141 ns|    108.639 ns|   9.10|     0.17|      469 B|       32 B
+|   LinqSumList|    1000|   12,293.53 ns|     47.551 ns|     39.708 ns|  18.13|     0.07|      469 B|       40 B
+|      ForArray|   10000|    6,770.89 ns|     12.295 ns|     10.899 ns|   1.00|     0.00|       66 B|          -
+|       ForList|   10000|    8,366.20 ns|     33.350 ns|     31.196 ns|   1.24|     0.00|       69 B|          -
+|  ForEachArray|   10000|    4,731.78 ns|     17.615 ns|     16.477 ns|   0.70|     0.00|       51 B|          -
+|   ForEachList|   10000|   10,948.58 ns|     24.122 ns|     18.833 ns|   1.62|     0.00|       90 B|          -
+|  LinqSumArray|   10000|   63,647.76 ns|  1,248.049 ns|  1,979.539 ns|   9.36|     0.31|      469 B|       32 B
+|   LinqSumList|   10000|  125,781.26 ns|  2,487.085 ns|  2,326.421 ns|  18.58|     0.35|      469 B|       40 B
 |===
